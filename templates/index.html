@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Plastic Waste Classifier
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- ==================================
+         Header
+    =================================== -->
+
+    <header>
+
+        <div class="icon">
+            ♻️
+        </div>
+
+        <h1>
+            Plastic Waste Classifier
+        </h1>
+
+        <p>
+            Upload or capture an image to detect
+            plastic waste using computer vision.
+        </p>
+
+    </header>
+
+
+
+    <!-- ==================================
+         Main Card
+    =================================== -->
+
+    <div class="card">
+
+        <h2>
+            Upload Waste Image
+        </h2>
+
+        <p class="subtitle">
+            Select an image or use your camera
+        </p>
+
+
+
+        <!-- Upload -->
+
+        <label
+            for="imageInput"
+            class="upload-btn">
+
+            📁 Upload Image
+
+        </label>
+
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+            hidden
+        >
+
+
+
+        <!-- Camera -->
+
+        <button
+            id="cameraBtn"
+            class="camera-btn">
+
+            📷 Capture Image
+
+        </button>
+
+
+
+        <!-- ==================================
+             Camera Section
+        =================================== -->
+
+        <div
+            id="cameraSection"
+            class="camera-section">
+
+            <video
+                id="video"
+                autoplay>
+            </video>
+
+
+            <div class="camera-buttons">
+
+                <button
+                    id="takePhotoBtn">
+
+                    📸 Take Photo
+
+                </button>
+
+
+                <button
+                    id="closeCameraBtn">
+
+                    ✕ Close Camera
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             Preview
+        =================================== -->
+
+        <div
+            id="previewSection"
+            class="preview-section">
+
+            <h3>
+                Image Preview
+            </h3>
+
+
+            <img
+                id="preview"
+                src=""
+                alt="Selected image"
+            >
+
+        </div>
+
+
+
+        <!-- ==================================
+             Predict
+        =================================== -->
+
+        <button
+            id="predictBtn"
+            class="predict-btn">
+
+            🔍 Predict Plastic Waste
+
+        </button>
+
+
+
+        <!-- ==================================
+             Result
+        =================================== -->
+
+        <div
+            id="resultSection"
+            class="result-section">
+
+            <h2>
+                Prediction Result
+            </h2>
+
+
+            <div id="result">
+                -
+            </div>
+
+
+            <div id="confidence">
+                Confidence: -
+            </div>
+
+
+            <!-- Confidence Bar -->
+
+            <div class="confidence-bar">
+
+                <div id="confidenceFill">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Try Another -->
+
+        <button
+            id="tryAnotherBtn"
+            class="try-btn">
+
+            🔄 Try Another Image
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ==================================
+         Dashboard Statistics
+    =================================== -->
+
+    <div class="stats-card">
+
+        <h2>
+            📊 Prediction Statistics
+        </h2>
+
+
+        <div class="stats-grid">
+
+
+            <!-- Total -->
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    🔢
+                </div>
+
+                <h3 id="totalPredictions">
+                    0
+                </h3>
+
+                <p>
+                    Total Predictions
+                </p>
+
+            </div>
+
+
+
+            <!-- Plastic -->
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    ♻️
+                </div>
+
+                <h3 id="plasticCount">
+                    0
+                </h3>
+
+                <p>
+                    Plastic Detected
+                </p>
+
+            </div>
+
+
+
+            <!-- Non Plastic -->
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    🌱
+                </div>
+
+                <h3 id="nonPlasticCount">
+                    0
+                </h3>
+
+                <p>
+                    Non-Plastic
+                </p>
+
+            </div>
+
+
+
+            <!-- Average -->
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    🎯
+                </div>
+
+                <h3 id="averageConfidence">
+                    0%
+                </h3>
+
+                <p>
+                    Average Confidence
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================
+         Prediction History
+    =================================== -->
+
+    <div class="history-card">
+
+        <h2>
+            📋 Prediction History
+        </h2>
+
+
+        <!-- Clear History -->
+
+        <button
+            id="clearHistoryBtn"
+            class="clear-history-btn">
+
+            🗑️ Clear History
+
+        </button>
+
+
+        <!-- Export History -->
+
+        <button
+            id="exportHistoryBtn"
+            class="export-history-btn">
+
+            📥 Export History
+
+        </button>
+
+
+        <!-- History List -->
+
+        <div id="historyList">
+
+            <p>
+                No predictions yet.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==================================
+     JavaScript
+=================================== -->
+
+<script
+    src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+
+</body>
+
+</html>

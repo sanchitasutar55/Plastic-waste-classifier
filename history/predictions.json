@@ -1,0 +1,68 @@
+[
+    {
+        "filename": "bag.jpg",
+        "prediction": "Non-Plastic Waste",
+        "confidence": 81.45,
+        "time": "2026-09-18 19:54:13"
+    },
+    {
+        "filename": "bottle.jpg",
+        "prediction": "Plastic Waste Detected",
+        "confidence": 99.87,
+        "time": "2026-09-18 19:54:27"
+    },
+    {
+        "filename": "paper.png",
+        "prediction": "Non-Plastic Waste",
+        "confidence": 99.58,
+        "time": "2026-09-18 20:07:37"
+    },
+    {
+        "filename": "wrapper.jpg",
+        "prediction": "Plastic Waste Detected",
+        "confidence": 99.91,
+        "time": "2026-09-18 21:23:52"
+    },
+    {
+        "filename": "container.jpg",
+        "prediction": "Plastic Waste Detected",
+        "confidence": 99.8,
+        "time": "2026-09-18 21:25:01"
+    },
+    {
+        "filename": "cup.jpg",
+        "prediction": "Plastic Waste Detected",
+        "confidence": 99.82,
+        "time": "2026-09-18 21:25:24"
+    },
+    {
+        "filename": "food_waste.jpg",
+        "prediction": "Non-Plastic Waste",
+        "confidence": 99.91,
+        "time": "2026-09-18 21:27:06"
+    },
+    {
+        "filename": "glass.jpg",
+        "prediction": "Non-Plastic Waste",
+        "confidence": 99.71,
+        "time": "2026-09-18 21:27:22"
+    },
+    {
+        "filename": "leaves.jpg",
+        "prediction": "Non-Plastic Waste",
+        "confidence": 99.9,
+        "time": "2026-09-18 21:27:33"
+    },
+    {
+        "filename": "metal.jpg",
+        "prediction": "Non-Plastic Waste",
+        "confidence": 99.92,
+        "time": "2026-09-18 21:27:42"
+    },
+    {
+        "filename": "cardboard-texture.jpg",
+        "prediction": "Non-Plastic Waste",
+        "confidence": 77.62,
+        "time": "2026-09-18 21:28:07"
+    }
+]
